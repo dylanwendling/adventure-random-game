@@ -1,0 +1,48 @@
+#include<iostream>
+#include<time.h>
+#include<cstdlib>
+using namespace std;
+//start of main function
+int main()
+{
+char name[15];
+  cout<<"enter the players first name: "<<endl;
+cin>>name;
+  cout<<"Welcome "<<name<<" to The Adventure "<<endl;
+  //Seed a time to generate a random number
+srand(time(0));
+
+//declare and set values to variables
+int health=10;
+int attack=0;
+int block=0;
+int turns= rand()%100;
+  
+  while(health>0 && turns>rand()%50)
+{
+//start encounter
+//Generate random number for attack
+attack= rand() % 4;
+block= rand() % 4;
+
+//subtract health by 1 if block is less than attack
+if(block<=attack)
+health--;
+}
+//check if health >0 then print the message, Congratulations
+if(health>0)
+cout<<"Congratulations you have "<<health<<" health in "<<turns<<" turns ! "<<endl;
+else
+//otherwise ,print the message,Sorry!You are defeated
+
+cout<<"Sorry!You are defeated at "<<health<<" health in "<<turns<<" turns!"<<endl;
+
+  if(block>=attack)
+cout<<"Successful block"<<endl;
+  
+if(health<=9)
+  cout<<"Go see the doctor! "<<endl;
+  
+return 0;
+
+}
