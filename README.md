@@ -1,2 +1,2 @@
 # adventure-random-game
-veiw working code here https://replit.com/@SnowOrcaGaming/adventure-random-game
+veiw working code here https://www.online-ide.com/wSZKCkao6n
